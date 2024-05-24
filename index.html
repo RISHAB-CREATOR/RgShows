@@ -2329,7 +2329,7 @@
                     return `https://vidsrc.in/embed/movie/${e}`
                 },
                 showUrl: function({id: e, season: t, episode: n}) {
-                    return `https://vidsrc.in/embed/tv?tmdb=${e}&season=${n}&episode=${t}`
+                    return `https://vidsrc.in/embed/tv?tmdb=${e}&season=${t}&episode=${n}`
                 }
             },
             "vidsrc.pm": {
@@ -2338,7 +2338,7 @@
                     return `https://vidsrc.pm/embed/movie/${e}`
                 },
                 showUrl: function({id: e, season: t, episode: n}) {
-                    return `https://vidsrc.pm/embed/tv?tmdb=${e}&season=${n}&episode=${t}`
+                    return `https://vidsrc.pm/embed/tv?tmdb=${e}&season=${t}&episode=${n}`
                 }
             },
             "2embed.org": {
@@ -2366,6 +2366,96 @@
                 },
                 showUrl: function({id: e, season: t, episode: n}) {
                     return `https://player.autoembed.cc/embed/tv/${e}/${t}/${n}`
+                }
+            },
+            "warezcdn.com": {
+                name: "warezcdn.com",
+                movieUrl: function({imdbId: e}) {
+                    return `https://embed.warezcdn.com/filme/${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://embed.warezcdn.com/serie/${e}/${t}/${n}`
+                }
+            },
+            "nunflix": {
+                name: "nunflix",
+                movieUrl: function({id: e}) {
+                    return `https://new-nunflix-player.vercel.app/media/tmdb-movie-${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://new-nunflix-player.vercel.app/media/tmdb-tv-${e}`
+                }
+            },
+            "streamflix 1": {
+                name: "streamflix 1",
+                movieUrl: function({id: e}) {
+                    return `https://watch.streamflix.one/movie/${e}/watch?server=1`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://watch.streamflix.one/tv/${e}/watch?server=1&season=${t}&episode=${n}`
+                }
+            },
+            "streamflix 2": {
+                name: "streamflix 2",
+                movieUrl: function({id: e}) {
+                    return `https://watch.streamflix.one/movie/${e}/watch?server=2`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://watch.streamflix.one/tv/${e}/watch?server=2&season=${t}&episode=${n}`
+                }
+            },
+            "blackvid.space": {
+                name: "blackvid.space",
+                movieUrl: function({id: e}) {
+                    return `https://blackvid.space/embed?tmdb=${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://blackvid.space/embed?tmdb=${e}&season=${t}&episode=${n}`
+                }
+            },
+            "superflix": {
+                name: "superflix",
+                movieUrl: function({imdbId: e}) {
+                    return `https://superflixapi.top/filme/${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://superflixapi.top/serie/${e}/${t}/${n}`
+                }
+            },
+            "api.slidemovies": {
+                name: "api.slidemovies",
+                movieUrl: function({id: e}) {
+                    return `https://api.slidemovies.org/movies/?id=${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://api.slidemovies.org/tv/?id=${e}&s=${t}&e=${n}`
+                }
+            },
+            "moviesclub": {
+                name: "moviesclub",
+                movieUrl: function({id: e}) {
+                    return `https://moviesapi.club/movie/${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://moviesapi.club/tv/${e}-${t}-${n}`
+                }
+            },
+            "filmclub": {
+                name: "filmclub",
+                movieUrl: function({id: e}) {
+                    return `https://vip.filmclub.tv/embed/movie?tmdb=${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://vip.filmclub.tv/embed/series?tmdb=${e}&sea=${t}&epi=${n}`
+                }
+            },
+            "mostream": {
+                name: "mostream",
+                movieUrl: function({id: e}) {
+                    return `https://mostream.us/embed.php?tmdb=${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://mostream.us/embed.php?tmdb=${e}&s=${t}&e=${n}`
                 }
             },
         }
