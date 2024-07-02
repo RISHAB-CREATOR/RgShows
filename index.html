@@ -3099,13 +3099,17 @@
 
                     // Check the value of n and redirect accordingly
                     if (n.includes('m')) {
-                        window.history.pushState(null, null, `https://rgshows.me/download/movies/index.html?id=${numericPart}`);
-                        // Optionally, you can use the following line if you need to execute any additional code after changing the URL
-                        window.location.href = `https://rgshows.me/download/movies/index.html?id=${numericPart}`;
+                        console.log('Redirecting to movies'); // Log redirect action
+                        const newUrl = `https://rgshows.me/download/movies/index.html?id=${numericPart}`;
+                        window.history.pushState(null, null, newUrl);
+                        // Dynamically load the content if needed, otherwise just update the URL
+                        window.location.href = newUrl;
                     } else if (n.includes('s')) {
-                        window.history.pushState(null, null, `https://rgshows.me/download/series/index.html?id=${numericPart}`);
-                        // Optionally, you can use the following line if you need to execute any additional code after changing the URL
-                        window.location.href = `https://rgshows.me/download/series/index.html?id=${numericPart}`;
+                        console.log('Redirecting to series'); // Log redirect action
+                        const newUrl = `https://rgshows.me/download/series/index.html?id=${numericPart}`;
+                        window.history.pushState(null, null, newUrl);
+                        // Dynamically load the content if needed, otherwise just update the URL
+                        window.location.href = newUrl;
                     }
                 }, 2000);
             }
