@@ -3101,11 +3101,11 @@
                     if (n.includes('m')) {
                         window.history.pushState(null, null, `https://rgshows.me/download/movies/index.html?id=${numericPart}`);
                         // Optionally, you can use the following line if you need to execute any additional code after changing the URL
-                        window.location.reload();
+                        window.location.href = `https://rgshows.me/download/movies/index.html?id=${numericPart}`;
                     } else if (n.includes('s')) {
                         window.history.pushState(null, null, `https://rgshows.me/download/series/index.html?id=${numericPart}`);
                         // Optionally, you can use the following line if you need to execute any additional code after changing the URL
-                        window.location.reload();
+                        window.location.href = `https://rgshows.me/download/series/index.html?id=${numericPart}`;
                     }
                 }, 2000);
             }
